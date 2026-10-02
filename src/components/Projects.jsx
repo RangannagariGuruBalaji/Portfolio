@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, ZoomIn, X, CloudSun, CalendarCheck } from 'lucide-react';
+import { ExternalLink, ZoomIn, X, CloudSun, CalendarCheck, ClipboardCheck } from 'lucide-react';
 
 const GithubIcon = ({ size = 16 }) => (
   <svg
@@ -23,6 +23,31 @@ export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projectsData = [
+    {
+      id: 'nxt-assess-app',
+      title: 'Nxt Assess - Online Assessment Platform',
+      category: 'react',
+      tag: 'ReactJS / Context API / REST API',
+      desc: 'An interactive online assessment platform featuring dynamic question navigation, live countdown timer, context state evaluation, and auto-submission.',
+      tech: ['ReactJS', 'React Router', 'Context API', 'REST API', 'JavaScript', 'HTML5', 'CSS3'],
+      source: 'https://github.com/RangannagariGuruBalaji/Nxt-Assess-App',
+      demo: 'https://nxt-assess-4sl9q9jks-balaji7.vercel.app',
+      icon: <ClipboardCheck size={32} style={{ color: '#6366f1' }} />,
+      bullets: [
+        'Developed a responsive online assessment platform with real-time question evaluation and automated submission capabilities.',
+        'Integrated REST API (apis.ccbp.in/assess/questions) to dynamically fetch question banks, option formats, and assessment configurations.',
+        'Implemented global state management using React Context API for selected answer tracking, question navigation, and score calculations.',
+        'Built an interactive Question Palette & Timer component with countdown alert handling (600s), step navigation, and progress tracking.',
+        'Secured application routes using custom authentication states and ProtectedRoute wrappers.',
+        'Deployed live production build on Vercel with full responsiveness across desktop and mobile devices.'
+      ],
+      insights: {
+        architecture: 'Component-driven React application utilizing Context API (EvaluationContext) for evaluation state, custom ProtectedRoute for session authentication, and REST API integration for dynamic questions.',
+        challenges: 'Managing timer synchronization and multi-question state persistence across route transitions and window blur events. Solved using React Context state hooks and auto-submit triggers on countdown expiration.',
+        performance: 'Optimized re-renders with structured context selectors and efficient state batching during question option selection.'
+      },
+      roles: ['frontend', 'swe', 'all']
+    },
     {
       id: 'weather-app',
       title: 'Professional React Weather App',
