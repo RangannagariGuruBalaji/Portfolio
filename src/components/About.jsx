@@ -15,7 +15,7 @@ export const About = () => {
       degree: 'Intermediate (MPC)',
       institution: 'Sri Chaithanya Junior College, Piler',
       period: '2020 – 2022',
-      grade: '57%',
+      grade: '60%',
       badge: 'High School',
       highlights: 'Completed Higher Secondary Education specializing in Maths, Physics, and Chemistry.'
     },
